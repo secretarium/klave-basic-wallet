@@ -5,10 +5,10 @@
     ],
     "applications": [
         {
-            "name": "Key-Management-Wallet",
+            "name": "Klave-Basic-Wallet",
             "slug": "kmWallet",
             "version": "0.0.1",
-            "rootDir": "/apps/key-management-wallet"
+            "rootDir": "/apps/klave-basic-wallet"
         }
     ]
 }
