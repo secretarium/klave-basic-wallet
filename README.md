@@ -21,7 +21,7 @@
 
 Wallet are used to store and manage securely cryptographic keys that are needed to sign transaction and payload.
 
-The basic Klave wallet provides the following functions:
+The Klave Wallet provides the following functions:
 
 - Create, delete ECDSA and AES Keys
 - Sign, Verify, Encrypt, Decrypt
@@ -31,7 +31,7 @@ The basic Klave wallet provides the following functions:
 
 - **Create Wallet:** Create your Wallet
 - **Manage cryptographic keys lifecycle:** Create, delete and use your cryptographic keys
-- **Sign and Verify:** Create and verify signature
+- **Sign and Verify:** Create and verify signature with your keys
 - **Encrypt and decrypt:** Encrypt message and Decrypt cypher with your keys
 
 ## Deploy Your Own
