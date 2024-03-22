@@ -1,0 +1,14 @@
+{
+    "version": "1",
+    "branches": [
+        "*"
+    ],
+    "applications": [
+        {
+            "name": "Key-Management-Wallet",
+            "slug": "kmWallet",
+            "version": "0.0.1",
+            "rootDir": "/apps/key-management-wallet"
+        }
+    ]
+}
