@@ -6,7 +6,7 @@
     "applications": [
         {
             "name": "Klave-Basic-Wallet",
-            "slug": "kmWallet",
+            "slug": "klave-wallet",
             "version": "0.0.1",
             "rootDir": "/apps/klave-basic-wallet"
         }
