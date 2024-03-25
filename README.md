@@ -1,5 +1,5 @@
 <a href="https://klave.com/">
-  <img alt="Klave - Wallet" src="https://klave.com/images/marketplace/krc20.png">
+  <img alt="Klave - Wallet" src="https://klave.com/images/marketplace/wallet.svg">
   <h1 align="center">Manage securely your cryptographic keys on Klave</h1>
 </a>
 
