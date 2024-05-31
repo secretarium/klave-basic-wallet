@@ -3,19 +3,12 @@
         "build": "stac ."
     },
     "devDependencies": {
-        "@klave/sdk": "0.10.1",
-        "@klave/compiler": "0.3.3",
-        "assemblyscript": "^0.27.22",
+        "@klave/sdk": "0.11.0",
+        "as-base64": "0.2.0",
+        "assemblyscript": "^0.27.26",
+        "path-complete-extname": "1.0.0",
         "tslib": "^2.6.2",
         "visitor-as": "^0.11.4",
-        "@klave/as-json": "^0.5.67-fix.0"
-    },
-    "dependencies": {
-        "as-base64": "^0.2.0",
-        "path-complete-extname": "^1.0.0",
         "zod": "^3.22.4"
-    },
-    "resolutions": {
-        "**/@klave/compiler": "0.3.3"
     }
 }

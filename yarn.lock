@@ -2,21 +2,21 @@
 # yarn lockfile v1
 
 
-"@klave/as-json@^0.5.67-fix.0":
-  version "0.5.67-fix.0"
-  resolved "https://registry.yarnpkg.com/@klave/as-json/-/as-json-0.5.67-fix.0.tgz#b669e5b3dfebd5013577fb24a3dc3ff30bd33b0d"
-  integrity sha512-5XdQFQy0ymjXkEbd9VKOk7fZUojxuM2kFnniIFlLprUCRDFBIEZHKJ0XqWpY89bDxQi5jPESW5KCxxqQ/3uMpg==
+"@klave/as-json@^0.8.2":
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@klave/as-json/-/as-json-0.8.2.tgz#1c5e499f0e92fdcabf04700a59e3d7fd119864bb"
+  integrity sha512-2eX1fINBlljOT7GO9Xe5D4XbhQ4OedPyi2+16vg0v7TV5Qar2/CUVGKMHj+YOqR5NpKil5Y30Y9gDBtyIxpK9A==
   dependencies:
     as-string-sink "^0.5.3"
     as-variant "^0.4.1"
     as-virtual "^0.1.9"
 
-"@klave/compiler@*", "@klave/compiler@0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@klave/compiler/-/compiler-0.3.3.tgz#7b29889536d35c3edf5050f07aa76a7026bb0b51"
-  integrity sha512-zhEFm/2TBR0775pWPYv38d3xiqp9Y7dfNm1oNIEMqPQmGo2w3Jr3bnYgZrQoB6RBkeKVc5pkX6AawlEU4fh+uw==
+"@klave/compiler@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@klave/compiler/-/compiler-0.4.0.tgz#986bd5fc617186889b526c8e2895a99dd9f1e142"
+  integrity sha512-hevcjA9vv/MPB9Ak9gao/sA1XwhbECMN2vzoc4dr2bzD7ohESDeYOeE+Vlw5PpqS2frk/ze0//Sj03DLvsZPtg==
   dependencies:
-    "@klave/as-json" "^0.5.67-fix.0"
+    "@klave/as-json" "^0.8.2"
     "@total-typescript/ts-reset" "^0.5.1"
     assemblyscript "^0.27.27"
     serialize-error "8.1.0"
@@ -24,13 +24,13 @@
     typescript "^5.4.4"
     uuid "^9.0.1"
 
-"@klave/sdk@0.10.1":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@klave/sdk/-/sdk-0.10.1.tgz#4904c49391161a6ae0344b5f62e9d0a1f168b564"
-  integrity sha512-B0aHCP4tdGMSweW9V/dZfdsk9t8Vf71yKGQVR1aCAKlxdY9nWXJ6zQ36iUZI9qHe+nrNOS9Uo0WSoaY697b9Bw==
+"@klave/sdk@0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@klave/sdk/-/sdk-0.11.0.tgz#597677296d04961caa402953f9f27cf38d5f2306"
+  integrity sha512-PWhNOau4aQqlSvwYlOsUvfP/UGex9MXim2iGOEqKubZb0yfSAIpgnSETX1XzGBVIBCXFahzfySKnJ8Isk9ZA4g==
   dependencies:
-    "@klave/as-json" "^0.5.67-fix.0"
-    "@klave/compiler" "*"
+    "@klave/as-json" "^0.8.2"
+    "@klave/compiler" "0.4.0"
     "@swc/helpers" "0.5.11"
     "@total-typescript/ts-reset" "^0.5.1"
     as-base64 "0.2.0"
@@ -61,7 +61,7 @@ ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-as-base64@0.2.0, as-base64@^0.2.0:
+as-base64@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/as-base64/-/as-base64-0.2.0.tgz#b4bed937c93bfb6524b932b517e1b8571a0dd518"
   integrity sha512-j6JxprAVN4SXUcZiSChuMBf0JJOCdh5OfrHAepluxmFWuDZZm+YjmfNSk8djUHRPEB+Ui5HGvrz46GLvTJf3ig==
@@ -81,7 +81,7 @@ as-virtual@^0.1.9:
   resolved "https://registry.yarnpkg.com/as-virtual/-/as-virtual-0.1.9.tgz#57ad771b8ba4216143d70174d0b40ee494313945"
   integrity sha512-R1nR7TT0KcROL/TxSXmiX2Q+7CgUMrjT/y9IP07StStqWs32KT2mpadJNF//yHWRaIJWe6atqTqO0JzsdhkPcQ==
 
-assemblyscript@^0.27.22, assemblyscript@^0.27.27:
+assemblyscript@^0.27.26, assemblyscript@^0.27.27:
   version "0.27.27"
   resolved "https://registry.yarnpkg.com/assemblyscript/-/assemblyscript-0.27.27.tgz#a3ebab9ab1f7e5ed3e88d7e81d04be57874f15bf"
   integrity sha512-z4ijXsjjk3uespEeCWpO1K2GQySc6bn+LL5dL0tsC2VXNYKFnKDmAh3wefcKazxXHFVhYlxqNfyv96ajaQyINQ==
@@ -152,7 +152,7 @@ long@^5.2.1:
   resolved "https://registry.yarnpkg.com/long/-/long-5.2.3.tgz#a3ba97f3877cf1d778eccbcb048525ebb77499e1"
   integrity sha512-lcHwpNoggQTObv5apGNCTdJrO69eHOZMi4BNC+rTLER8iHAqGrUVeLh/irVIM7zTw2bOXA8T6uNPeujwOLg/2Q==
 
-path-complete-extname@1.0.0, path-complete-extname@^1.0.0:
+path-complete-extname@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/path-complete-extname/-/path-complete-extname-1.0.0.tgz#f889985dc91000c815515c0bfed06c5acda0752b"
   integrity sha512-CVjiWcMRdGU8ubs08YQVzhutOR5DEfO97ipRIlOGMK5Bek5nQySknBpuxVAVJ36hseTNs+vdIcv57ZrWxH7zvg==
