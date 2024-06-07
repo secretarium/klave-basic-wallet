@@ -11,10 +11,10 @@
     as-variant "^0.4.1"
     as-virtual "^0.1.9"
 
-"@klave/compiler@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@klave/compiler/-/compiler-0.4.0.tgz#986bd5fc617186889b526c8e2895a99dd9f1e142"
-  integrity sha512-hevcjA9vv/MPB9Ak9gao/sA1XwhbECMN2vzoc4dr2bzD7ohESDeYOeE+Vlw5PpqS2frk/ze0//Sj03DLvsZPtg==
+"@klave/compiler@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@klave/compiler/-/compiler-0.5.0.tgz#d4bc659d9ab955252c9564cc1f486a6659323d15"
+  integrity sha512-nLxjk8pEybH2Vh9GbgUkfXBf7rJFqEUm1sl1wcRwDZqZk4b78ukLdYTQU+X6kRzLL4CQFsKr5ezCznHul/srPg==
   dependencies:
     "@klave/as-json" "^0.8.2"
     "@total-typescript/ts-reset" "^0.5.1"
@@ -24,13 +24,13 @@
     typescript "^5.4.4"
     uuid "^9.0.1"
 
-"@klave/sdk@0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@klave/sdk/-/sdk-0.11.0.tgz#597677296d04961caa402953f9f27cf38d5f2306"
-  integrity sha512-PWhNOau4aQqlSvwYlOsUvfP/UGex9MXim2iGOEqKubZb0yfSAIpgnSETX1XzGBVIBCXFahzfySKnJ8Isk9ZA4g==
+"@klave/sdk@0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@klave/sdk/-/sdk-0.12.0.tgz#6fcedd51a4727eb8689f381c363edcf33414a52f"
+  integrity sha512-qdeMw2hJrAE+r5j5+XEPWY+wEh1k2RlBCIvh/OTuTsHn78PvcxqdOCZp/yxP/skaJGHjlpJut/z1aTeiiXoJpQ==
   dependencies:
     "@klave/as-json" "^0.8.2"
-    "@klave/compiler" "0.4.0"
+    "@klave/compiler" "0.5.0"
     "@swc/helpers" "0.5.11"
     "@total-typescript/ts-reset" "^0.5.1"
     as-base64 "0.2.0"
