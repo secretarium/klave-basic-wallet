@@ -38,7 +38,13 @@ export class Key {
     }
 
     create(description: string, type: string): boolean {
-        this.id = b64encode(convertToUint8Array(Crypto.getRandomValues(64)));
+        let random = Crypto.getRandomValues(64);
+        if(!random) {
+            revert("ERROR: Random values could not be generated");
+            return false;
+        }
+        this.id = b64encode(random);
+        revert(`ERROR: Key type '${this.type}' is not supported`);
         this.description = description;
         this.type = type;
         this.owner = Context.get('sender');
@@ -98,8 +104,13 @@ export class Key {
         if (!KeyAES) {
             revert("ERROR: Key not found");
             return "";
-        }        
-        return b64encode(convertToUint8Array(KeyAES.encrypt(message)));
+        }
+        let cipherResult = KeyAES.encrypt(String.UTF8.encode(message));
+        if (!cipherResult.data) {
+            revert("ERROR: Encryption failed");
+            return "";
+        }
+        return b64encode(Uint8Array.wrap(cipherResult.data as ArrayBuffer));
     }
 
     decrypt(cypher: string): string {
@@ -112,6 +123,11 @@ export class Key {
             revert("ERROR: Key not found");
             return "";
         }        
-        return KeyAES.decrypt(convertToU8Array(b64decode(cypher)));
+        let cleartTextResult = KeyAES.decrypt(b64decode(cypher).buffer);
+        if (!cleartTextResult.data) {
+            revert("ERROR: Decryption failed");
+            return "";
+        }
+        return String.UTF8.decode(cleartTextResult.data as ArrayBuffer);
     }
 }
