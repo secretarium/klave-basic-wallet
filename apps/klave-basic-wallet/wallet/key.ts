@@ -43,35 +43,41 @@ export class Key {
             revert("ERROR: Random values could not be generated");
             return false;
         }
-        this.id = b64encode(random);
         revert(`ERROR: Key type '${this.type}' is not supported`);
         this.description = description;
         this.type = type;
         this.owner = Context.get('sender');
-        if (this.type == "ECDSA") {
-            const key = Crypto.ECDSA.generateKey(this.id);
-            if (key) {
-                emit(`SUCCESS: Key '${this.id}' has been generated`);
-                return true;
-            } else {
-                revert(`ERROR: Key '${this.id}' has not been generated`);
+        if (this.type == "AES") {
+            let result = Crypto.Subtle.generateKey({length: 256} as Crypto.AesKeyGenParams, true, ['encrypt', 'decrypt']);
+            if (result.err) {
+                let err = result.err as Error;
+                revert(err.message);
                 return false;
             }
+            let key = result.data as Crypto.CryptoKey;
+            emit(key.name);
+            this.id = key.name;
+            Crypto.Subtle.saveKey(key.name);
+            emit(`SUCCESS: Key '${this.id}' has been generated`);
         }
-        else if (this.type == "AES") {
-            const key = Crypto.AES.generateKey(this.id);
-            if (key) {
-                emit(`SUCCESS: Key '${this.id}' has been generated`);
-                return true;
-            } else {
-                revert(`ERROR: Key '${this.id}' has not been generated`);
+        else if (this.type == "ECDSA") {
+            let result = Crypto.Subtle.generateKey({namedCurve: 'P-256'} as Crypto.EcKeyGenParams, true, ['sign']);
+            if (result.err) {
+                let err = result.err as Error;
+                revert(err.message);
                 return false;
             }
-        }
+            let key = result.data as Crypto.CryptoKey;
+            emit(key.name);
+            this.id = key.name;
+            Crypto.Subtle.saveKey(key.name);
+            emit(`SUCCESS: Key '${this.id}' has been generated`);
+        }        
         else {
             revert(`ERROR: Key type '${this.type}' is not supported`);
             return false;
         }
+        return true;
     }
 
     delete(): void {
