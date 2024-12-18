@@ -8,7 +8,7 @@ const WalletTable = "WalletTable";
 /**
  * An Wallet is associated with a list of users and holds keys.
  */
-@JSON
+@json
 export class Wallet {    
     name: string;
     keys: Array<string>;

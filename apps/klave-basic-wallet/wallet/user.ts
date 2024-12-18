@@ -3,7 +3,7 @@ import { emit, revert } from "../klave/types"
 
 const UsersTable = "UsersTable";
 
-@JSON
+@json
 export class User {
     id: string;
     role: string;   // admin, user, etc.

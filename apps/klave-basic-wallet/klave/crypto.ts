@@ -3,7 +3,7 @@ import { convertToUint8Array, convertToU8Array } from "./helpers";
 import { emit } from "./types";
 import { encode as b64encode, decode as b64decode } from 'as-base64/assembly';
 
-@JSON
+@json
 export class SignInput {
     keyName: string;
     message: string;
@@ -14,7 +14,7 @@ export class SignInput {
     }
 }
 
-@JSON
+@json
 export class VerifyInput {
     keyName: string;
     message: string;

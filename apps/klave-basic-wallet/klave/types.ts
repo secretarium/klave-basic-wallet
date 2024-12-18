@@ -1,6 +1,6 @@
 import {Notifier, JSON} from "@klave/sdk"
 
-@JSON
+@json
 export class ErrorMessage {
     success!: boolean;
     message!: string;

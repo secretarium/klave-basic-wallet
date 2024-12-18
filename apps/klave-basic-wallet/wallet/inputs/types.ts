@@ -1,51 +1,51 @@
 import { JSON } from "@klave/sdk";
 
-@JSON
+@json
 export class CreateWalletInput {
     name: string;
 }
 
-@JSON 
+@json 
 export class SignInput {
     keyId: string;
     payload: string;
 }
 
-@JSON
+@json
 export class VerifyInput {
     keyId: string;
     payload: string;
     signature: string;    
 }
 
-@JSON 
+@json 
 export class AddUserInput {
     userId: string;
     role: string;
 }
 
-@JSON 
+@json 
 export class RemoveUserInput {
     userId: string;    
 }
 
-@JSON 
+@json 
 export class AddKeyInput {
     description: string;
     type: string;
 }
 
-@JSON 
+@json 
 export class RemoveKeyInput {
     keyId: string;    
 }
 
-@JSON
+@json
 export class ListKeysInput {
     user: string;
 }
 
-@JSON
+@json
 export class ResetInput {
     keys: string[];
 }

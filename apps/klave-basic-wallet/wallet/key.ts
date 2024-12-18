@@ -6,7 +6,7 @@ import { convertToUint8Array, convertToU8Array } from "../klave/helpers";
 
 const KeysTable = "KeysTable";
 
-@JSON
+@json
 export class Key {
     id: string;
     description: string;
